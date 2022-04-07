@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.ort.recyclerlist_apprecetas.fragments.RecipesFragment"
+        android:label="recipes_fragment"
+        tools:layout="@layout/recipes_fragment" />
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.ort.recyclerlist_apprecetas.fragments.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_LoginFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </fragment>
+</navigation>
